@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEYU IA — Automação Inteligente. Resultados Reais.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#060807;
+  --surface:#0f1310;
+  --border:#1c2420;
+  --green:#6fff3c;
+  --white:#f4f7f3;
+  --muted:#8b968c;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Inter',sans-serif;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 6vw;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  background:#060807ee;
+  backdrop-filter:blur(10px);
+}
+
+.logo{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:1.2rem;
+}
+
+.logo span{
+  color:var(--green);
+}
+
+nav a{
+  color:var(--white);
+  text-decoration:none;
+  margin-left:20px;
+}
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 6vw;
+}
+
+.hero h1{
+  font-size:clamp(2.5rem,6vw,5rem);
+  line-height:1.1;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:var(--green);
+}
+
+.hero p{
+  max-width:700px;
+  color:var(--muted);
+  line-height:1.7;
+  margin-bottom:35px;
+  font-size:1.1rem;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--green);
+  color:#000;
+  text-decoration:none;
+  padding:15px 28px;
+  border-radius:999px;
+  font-weight:700;
+}
+
+section{
+  padding:100px 6vw;
+}
+
+.section-title{
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:2.5rem;
+  margin-top:10px;
+}
+
+.section-title p{
+  color:var(--muted);
+  margin-top:15px;
+  max-width:700px;
+  line-height:1.7;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  border:1px solid var(--border);
+  background:var(--surface);
+  padding:30px;
+  border-radius:16px;
+}
+
+.card h3{
+  margin-bottom:15px;
+}
+
+.card p{
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.cta{
+  text-align:center;
+  border-top:1px solid var(--border);
+}
+
+.cta h2{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.cta p{
+  color:var(--muted);
+  margin-bottom:35px;
+}
+
+footer{
+  padding:40px 6vw;
+  border-top:1px solid var(--border);
+  text-align:center;
+  color:var(--muted);
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:2.8rem;
+  }
+
+  .cta h2{
+    font-size:2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    TEYU <span>IA</span>
+  </div>
+
+  <div>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
+<section class="hero">
+
+  <h1>
+    Transforme atendimento em <span>vendas</span> com IA.
+  </h1>
+
+  <p>
+    Criamos sistemas inteligentes que automatizam atendimento,
+    vendas e processos para sua empresa ganhar tempo
+    e faturar mais.
+  </p>
+
+  <a class="btn" href="mailto:joaorei990@gmail.com">
+    Enviar e-mail
+  </a>
+
+</section>
+
+<section id="servicos">
+
+  <div class="section-title">
+    <p>O que fazemos</p>
+    <h2>Automação inteligente para empresas</h2>
+  </div>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>Chatbots com IA</h3>
+      <p>
+        Atendimento automático inteligente para responder clientes 24 horas.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Automação de E-mail</h3>
+      <p>
+        Fluxos automáticos usando Gmail para atendimento e follow-up.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Integração de sistemas</h3>
+      <p>
+        Conectamos CRM, planilhas e ferramentas para automatizar processos.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta" id="contato">
+
+  <h2>
+    Vamos automatizar sua empresa?
+  </h2>
+
+  <p>
+    Entre em contato agora mesmo e descubra como a IA pode ajudar seu negócio.
+  </p>
+
+  <a class="btn" href="mailto:joaorei990@gmail.com">
+    joaorei990@gmail.com
+  </a>
+
+</section>
+
+<footer>
+  © 2026 TEYU IA · Todos os direitos reservados
+</footer>
+
+</body>
+</html>
