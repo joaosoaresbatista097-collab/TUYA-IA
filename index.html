@@ -3,19 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TEYU IA — Automação Inteligente. Resultados Reais.</title>
+
+<title>TUYA-IA — Automação Inteligente</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#060807;
-  --surface:#0f1310;
-  --border:#1c2420;
-  --green:#6fff3c;
-  --white:#f4f7f3;
-  --muted:#8b968c;
+
+html{
+  scroll-behavior:smooth;
 }
 
 *{
@@ -25,150 +22,220 @@
 }
 
 body{
-  background:var(--bg);
-  color:var(--white);
+  background:#050505;
+  color:white;
   font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+}
+
+section{
+  padding:100px 8%;
 }
 
 nav{
+  width:100%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 6vw;
-  border-bottom:1px solid var(--border);
-  position:sticky;
+  padding:25px 8%;
+  position:fixed;
   top:0;
-  background:#060807ee;
-  backdrop-filter:blur(10px);
+  left:0;
+  z-index:999;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .logo{
-  font-family:'Space Grotesk',sans-serif;
+  font-size:1.5rem;
   font-weight:700;
-  font-size:1.2rem;
 }
 
 .logo span{
-  color:var(--green);
+  color:#67ff4e;
 }
 
 nav a{
-  color:var(--white);
   text-decoration:none;
-  margin-left:20px;
+  color:white;
+  margin-left:25px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#67ff4e;
 }
 
 .hero{
-  min-height:90vh;
+  min-height:100vh;
   display:flex;
   flex-direction:column;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   text-align:center;
-  padding:40px 6vw;
+  position:relative;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:#67ff4e20;
+  filter:blur(140px);
+  border-radius:50%;
+  z-index:-1;
 }
 
 .hero h1{
-  font-size:clamp(2.5rem,6vw,5rem);
+  font-size:clamp(3rem,8vw,6rem);
   line-height:1.1;
-  margin-bottom:25px;
+  max-width:1000px;
 }
 
 .hero h1 span{
-  color:var(--green);
+  color:#67ff4e;
 }
 
 .hero p{
-  max-width:700px;
-  color:var(--muted);
-  line-height:1.7;
-  margin-bottom:35px;
+  margin-top:25px;
+  color:#b8b8b8;
   font-size:1.1rem;
+  line-height:1.8;
+  max-width:700px;
 }
 
 .btn{
   display:inline-block;
-  background:var(--green);
-  color:#000;
-  text-decoration:none;
-  padding:15px 28px;
-  border-radius:999px;
+  margin-top:40px;
+  padding:18px 35px;
+  background:#67ff4e;
+  color:black;
   font-weight:700;
+  text-decoration:none;
+  border-radius:999px;
+  transition:0.3s;
+  box-shadow:0 0 30px rgba(103,255,78,0.4);
 }
 
-section{
-  padding:100px 6vw;
+.btn:hover{
+  transform:translateY(-3px);
 }
 
-.section-title{
-  margin-bottom:50px;
+.title{
+  margin-bottom:60px;
 }
 
-.section-title h2{
-  font-size:2.5rem;
-  margin-top:10px;
+.title p{
+  color:#67ff4e;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:10px;
 }
 
-.section-title p{
-  color:var(--muted);
-  margin-top:15px;
+.title h2{
+  font-size:3rem;
   max-width:700px;
-  line-height:1.7;
 }
 
 .services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
 
 .card{
-  border:1px solid var(--border);
-  background:var(--surface);
-  padding:30px;
-  border-radius:16px;
+  background:#111;
+  border:1px solid rgba(255,255,255,0.08);
+  padding:35px;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#67ff4e;
 }
 
 .card h3{
   margin-bottom:15px;
+  font-size:1.4rem;
 }
 
 .card p{
-  color:var(--muted);
-  line-height:1.6;
+  color:#aaa;
+  line-height:1.7;
+}
+
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+  text-align:center;
+}
+
+.metric{
+  padding:40px;
+  background:#0d0d0d;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.metric h2{
+  font-size:3rem;
+  color:#67ff4e;
+}
+
+.metric p{
+  margin-top:10px;
+  color:#999;
 }
 
 .cta{
   text-align:center;
-  border-top:1px solid var(--border);
 }
 
 .cta h2{
-  font-size:3rem;
-  margin-bottom:20px;
+  font-size:3.5rem;
+  max-width:900px;
+  margin:auto;
 }
 
 .cta p{
-  color:var(--muted);
-  margin-bottom:35px;
+  margin-top:20px;
+  color:#aaa;
+  font-size:1.1rem;
 }
 
 footer{
-  padding:40px 6vw;
-  border-top:1px solid var(--border);
+  padding:40px 8%;
+  border-top:1px solid rgba(255,255,255,0.08);
   text-align:center;
-  color:var(--muted);
+  color:#777;
 }
 
 @media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
   .hero h1{
-    font-size:2.8rem;
+    font-size:3rem;
+  }
+
+  .title h2{
+    font-size:2rem;
   }
 
   .cta h2{
-    font-size:2rem;
+    font-size:2.2rem;
   }
+
 }
+
 </style>
 </head>
 
@@ -176,11 +243,12 @@ footer{
 
 <nav>
   <div class="logo">
-    TEYU <span>IA</span>
+    TUYA<span>-IA</span>
   </div>
 
   <div>
     <a href="#servicos">Serviços</a>
+    <a href="#metricas">Resultados</a>
     <a href="#contato">Contato</a>
   </div>
 </nav>
@@ -188,26 +256,26 @@ footer{
 <section class="hero">
 
   <h1>
-    Transforme atendimento em <span>vendas</span> com IA.
+    Transforme atendimento em
+    <span>vendas</span> com IA.
   </h1>
 
   <p>
-    Criamos sistemas inteligentes que automatizam atendimento,
-    vendas e processos para sua empresa ganhar tempo
-    e faturar mais.
+    Criamos automações inteligentes para empresas que querem
+    ganhar mais tempo, vender mais e reduzir trabalho manual.
   </p>
 
   <a class="btn" href="mailto:joaorei990@gmail.com">
-    Enviar e-mail
+    Enviar E-mail
   </a>
 
 </section>
 
 <section id="servicos">
 
-  <div class="section-title">
-    <p>O que fazemos</p>
-    <h2>Automação inteligente para empresas</h2>
+  <div class="title">
+    <p>O QUE FAZEMOS</p>
+    <h2>Automação inteligente para empresas modernas.</h2>
   </div>
 
   <div class="services">
@@ -215,22 +283,45 @@ footer{
     <div class="card">
       <h3>Chatbots com IA</h3>
       <p>
-        Atendimento automático inteligente para responder clientes 24 horas.
+        Atendimento automático inteligente 24 horas por dia.
       </p>
     </div>
 
     <div class="card">
-      <h3>Automação de E-mail</h3>
+      <h3>Automação de Gmail</h3>
       <p>
-        Fluxos automáticos usando Gmail para atendimento e follow-up.
+        Fluxos automáticos para atendimento, vendas e follow-up.
       </p>
     </div>
 
     <div class="card">
-      <h3>Integração de sistemas</h3>
+      <h3>Integração de Sistemas</h3>
       <p>
-        Conectamos CRM, planilhas e ferramentas para automatizar processos.
+        Conectamos CRM, planilhas e ferramentas automaticamente.
       </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="metricas">
+
+  <div class="metrics">
+
+    <div class="metric">
+      <h2>24/7</h2>
+      <p>Atendimento automático</p>
+    </div>
+
+    <div class="metric">
+      <h2>+70%</h2>
+      <p>Redução de tarefas manuais</p>
+    </div>
+
+    <div class="metric">
+      <h2>&lt;10s</h2>
+      <p>Tempo médio de resposta</p>
     </div>
 
   </div>
@@ -240,11 +331,11 @@ footer{
 <section class="cta" id="contato">
 
   <h2>
-    Vamos automatizar sua empresa?
+    Sua empresa ainda perde tempo com processos manuais?
   </h2>
 
   <p>
-    Entre em contato agora mesmo e descubra como a IA pode ajudar seu negócio.
+    Automatize agora com a TUYA-IA.
   </p>
 
   <a class="btn" href="mailto:joaorei990@gmail.com">
@@ -254,8 +345,39 @@ footer{
 </section>
 
 <footer>
-  © 2026 TEYU IA · Todos os direitos reservados
+  © 2026 TUYA-IA · Todos os direitos reservados
 </footer>
+
+<script>
+
+  // animação suave ao descer
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+
+      if(entry.isIntersecting){
+
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+
+      }
+
+    });
+  },{
+    threshold:0.15
+  });
+
+  document.querySelectorAll('section, .card, .metric').forEach((el)=>{
+
+    el.style.opacity = "0";
+    el.style.transform = "translateY(50px)";
+    el.style.transition = "all 1s ease";
+
+    observer.observe(el);
+
+  });
+
+</script>
 
 </body>
 </html>
